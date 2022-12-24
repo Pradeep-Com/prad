@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class ATMPinCode {
+  public static void main(String[] args) {
+    int correctPin = 1234;
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter your pin code: ");
+    int enteredPin = scanner.nextInt();
+    if (enteredPin == correctPin) {
+      System.out.println("Access granted.");
+    }
+    else
+    {
+      System.out.println("Access denied. Incorrect pin code.");
+    }
+  }
+}
