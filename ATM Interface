@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class ATMInterface {
+  public static void main(String[] args) {
+    // Create a scanner to read user input
+    Scanner scanner = new Scanner(System.in);
+
+    // Display the main menu
+    System.out.println("Welcome to the ATM. Please select an option:");
+    System.out.println("1. Check balance");
+    System.out.println("2. Withdraw money");
+    System.out.println("3. Deposit money");
+    System.out.println("4. Exit");
+
+    // Read the user's selection
+    int selection = scanner.nextInt();
+
+    // Perform the selected action
+    if (selection == 1) {
+      checkBalance();
+    } else if (selection == 2) {
+      withdrawMoney();
+    } else if (selection == 3) {
+      depositMoney();
+    } else if (selection == 4) {
+      exit();
+    } else {
+      System.out.println("Invalid selection. Please try again.");
+    }
+  }
+
+  public static void checkBalance() {
+    // TODO: Implement code to check the balance of the user's account
+    System.out.println("Your balance is $100.");
+  }
+
+  public static void withdrawMoney() {
+    // TODO: Implement code to withdraw money from the user's account
+    System.out.println("Enter the amount you would like to withdraw:");
+    // Read the amount to withdraw from the user
+    Scanner scanner = new Scanner(System.in);
+    double amount = scanner.nextDouble();
+    System.out.println("You have withdrawn $" + amount + ".");
+  }
+
+  public static void depositMoney() {
+    // TODO: Implement code to deposit money into the user's account
+    System.out.println("Enter the amount you would like to deposit:");
+    // Read the amount to deposit from the user
+    Scanner scanner = new Scanner(System.in);
+    double amount = scanner.nextDouble();
+    System.out.println("You have deposited $" + amount + ".");
+  }
+
+  public static void exit() {
+    // TODO: Implement code to exit the ATM
+    System.out.println("Thank you for using the ATM. Goodbye.");
+  }
+}
